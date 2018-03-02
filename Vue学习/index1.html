@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="Description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>电影名：{{movieName}}</p>
+    <p>上映日期：{{upTime}}</p>
+    <p>新电影：{{upTime>2000?'新':'旧'}}</p>
+    <p v-bind:title='title'>Hover me</p>
+</div>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            movieName: '泰坦尼克号',
+            upTime: '1992',
+            title: '我是标题'
+        },
+        methods: {}
+
+    })
+</script>
+</body>
+</html>
